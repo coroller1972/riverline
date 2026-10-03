@@ -1,0 +1,57 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-riverline}
+      POSTGRES_USER: ${POSTGRES_USER:-riverline}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-riverline_local}
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes --appendfsync always
+    volumes: [redis_data:/data]
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  migrate:
+    build: ./backend
+    command: alembic upgrade head
+    environment: &backend_environment
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://riverline:riverline_local@postgres:5432/riverline}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+    depends_on:
+      postgres: { condition: service_healthy }
+  api:
+    build: ./backend
+    environment: *backend_environment
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  worker:
+    build: ./backend
+    command: celery -A workers.celery_app:celery_app worker --loglevel=info --concurrency=1
+    environment: *backend_environment
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+  frontend:
+    build: ./frontend
+    ports: ["127.0.0.1:5173:80"]
+    depends_on:
+      api: { condition: service_healthy }
+volumes:
+  postgres_data:
+  redis_data:

@@ -1,0 +1,506 @@
+{
+  "iterations": 2000,
+  "algorithm": "cfr_plus",
+  "ev_oop": 11.111104468241809,
+  "ev_ip": -11.111104468241809,
+  "exploitability": 0.0007067785488823475,
+  "exploitability_pct": 0.0007067785488823475,
+  "converged": false,
+  "nodes": [
+    {
+      "id": "root",
+      "player": "OOP",
+      "history": [],
+      "pot": 100.0,
+      "actions": [
+        {
+          "id": "check",
+          "label": "Check",
+          "kind": "check",
+          "amount": 0.0,
+          "fraction": 0.0
+        },
+        {
+          "id": "bet_0.75",
+          "label": "Bet 75%",
+          "kind": "bet",
+          "amount": 75.0,
+          "fraction": 0.75
+        }
+      ],
+      "combos": [
+        {
+          "combo": "6h5h",
+          "hand_class": "65s",
+          "weight": 1.0,
+          "strategy": {
+            "check": 0.22228155286060747,
+            "bet_0.75": 0.7777184471393925
+          },
+          "action_evs": {
+            "check": 88.45667558975273,
+            "bet_0.75": 88.46210726644145
+          },
+          "ev": 88.46089990491244,
+          "reach_probability": 0.3333333333333333,
+          "counterfactual_reach": 0.3333333333333333,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "6h": 0, "5h": 0 }
+        },
+        {
+          "combo": "AhAd",
+          "hand_class": "AA",
+          "weight": 1.0,
+          "strategy": {
+            "check": 0.9999704177868532,
+            "bet_0.75": 2.9582213146725156e-5
+          },
+          "action_evs": {
+            "check": -15.38186165105525,
+            "bet_0.75": -16.479440455546396
+          },
+          "ev": -15.381894119865388,
+          "reach_probability": 0.3333333333333333,
+          "counterfactual_reach": 0.3333333333333333,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "Ah": 0, "Ad": 0 }
+        },
+        {
+          "combo": "KhKd",
+          "hand_class": "KK",
+          "weight": 1.0,
+          "strategy": {
+            "check": 0.6667002400023043,
+            "bet_0.75": 0.33329975999769557
+          },
+          "action_evs": {
+            "check": -39.74608523933876,
+            "bet_0.75": -39.74490654356912
+          },
+          "ev": -39.74569238032163,
+          "reach_probability": 0.3333333333333333,
+          "counterfactual_reach": 0.3333333333333333,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "Kh": 0, "Kd": 0 }
+        }
+      ],
+      "dead_combos": [],
+      "classes": [
+        {
+          "hand_class": "65s",
+          "combos": 1,
+          "strategy": {
+            "check": 0.22228155286060747,
+            "bet_0.75": 0.7777184471393925
+          },
+          "ev": 88.46089990491244,
+          "reach_probability": 0.3333333333333333
+        },
+        {
+          "hand_class": "AA",
+          "combos": 1,
+          "strategy": {
+            "check": 0.9999704177868532,
+            "bet_0.75": 2.9582213146725156e-5
+          },
+          "ev": -15.381894119865386,
+          "reach_probability": 0.3333333333333333
+        },
+        {
+          "hand_class": "KK",
+          "combos": 1,
+          "strategy": {
+            "check": 0.6667002400023043,
+            "bet_0.75": 0.33329975999769557
+          },
+          "ev": -39.74569238032163,
+          "reach_probability": 0.3333333333333333
+        }
+      ],
+      "strategy": {
+        "check": 0.629650736883255,
+        "bet_0.75": 0.37034926311674493
+      },
+      "ev": 11.111104468241809,
+      "reach_probability": 1.0
+    },
+    {
+      "id": "check",
+      "player": "IP",
+      "history": ["check"],
+      "pot": 100.0,
+      "actions": [
+        {
+          "id": "check",
+          "label": "Check",
+          "kind": "check",
+          "amount": 0.0,
+          "fraction": 0.0
+        },
+        {
+          "id": "bet_0.75",
+          "label": "Bet 75%",
+          "kind": "bet",
+          "amount": 75.0,
+          "fraction": 0.75
+        }
+      ],
+      "combos": [
+        {
+          "combo": "AsAc",
+          "hand_class": "AA",
+          "weight": 1.0,
+          "strategy": {
+            "check": 0.8464937179700981,
+            "bet_0.75": 0.1535062820299019
+          },
+          "action_evs": {
+            "check": 11.763629715884262,
+            "bet_0.75": 11.760417500088373
+          },
+          "ev": 11.763136620580358,
+          "reach_probability": 0.209883578961085,
+          "counterfactual_reach": 0.209883578961085,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "As": 0, "Ac": 0 }
+        },
+        {
+          "combo": "KsKc",
+          "hand_class": "KK",
+          "weight": 1.0,
+          "strategy": {
+            "check": 0.6152351377805383,
+            "bet_0.75": 0.38476486221946177
+          },
+          "action_evs": {
+            "check": -32.35264406787264,
+            "bet_0.75": -32.355983963449816
+          },
+          "ev": -32.35392914233422,
+          "reach_probability": 0.209883578961085,
+          "counterfactual_reach": 0.209883578961085,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "Ks": 0, "Kc": 0 }
+        },
+        {
+          "combo": "QhQd",
+          "hand_class": "QQ",
+          "weight": 1.0,
+          "strategy": {
+            "check": 2.1032287522354707e-6,
+            "bet_0.75": 0.9999978967712478
+          },
+          "action_evs": {
+            "check": 38.23254756751381,
+            "bet_0.75": 55.876810695978854
+          },
+          "ev": 55.87677358605733,
+          "reach_probability": 0.209883578961085,
+          "counterfactual_reach": 0.209883578961085,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "Qh": 0, "Qd": 0 }
+        }
+      ],
+      "dead_combos": [],
+      "classes": [
+        {
+          "hand_class": "AA",
+          "combos": 1,
+          "strategy": {
+            "check": 0.8464937179700981,
+            "bet_0.75": 0.15350628202990194
+          },
+          "ev": 11.763136620580358,
+          "reach_probability": 0.209883578961085
+        },
+        {
+          "hand_class": "KK",
+          "combos": 1,
+          "strategy": {
+            "check": 0.6152351377805383,
+            "bet_0.75": 0.38476486221946177
+          },
+          "ev": -32.35392914233422,
+          "reach_probability": 0.209883578961085
+        },
+        {
+          "hand_class": "QQ",
+          "combos": 1,
+          "strategy": {
+            "check": 2.1032287522354707e-6,
+            "bet_0.75": 0.9999978967712478
+          },
+          "ev": 55.87677358605733,
+          "reach_probability": 0.209883578961085
+        }
+      ],
+      "strategy": {
+        "check": 0.48724365299312955,
+        "bet_0.75": 0.5127563470068706
+      },
+      "ev": 11.761993688101157,
+      "reach_probability": 0.629650736883255
+    },
+    {
+      "id": "check/bet_0.75",
+      "player": "OOP",
+      "history": ["check", "bet_0.75"],
+      "pot": 175.0,
+      "actions": [
+        {
+          "id": "fold",
+          "label": "Fold",
+          "kind": "fold",
+          "amount": 0.0,
+          "fraction": 0.0
+        },
+        {
+          "id": "call",
+          "label": "Call",
+          "kind": "call",
+          "amount": 75.0,
+          "fraction": 0.0
+        }
+      ],
+      "combos": [
+        {
+          "combo": "6h5h",
+          "hand_class": "65s",
+          "weight": 1.0,
+          "strategy": {
+            "fold": 5.620688249948072e-7,
+            "call": 0.999999437931175
+          },
+          "action_evs": { "fold": -50.00000000000001, "call": 125.0 },
+          "ev": 124.99990163795562,
+          "reach_probability": 0.037992092350606556,
+          "counterfactual_reach": 0.1709187823356235,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "6h": 0, "5h": 0 }
+        },
+        {
+          "combo": "AhAd",
+          "hand_class": "AA",
+          "weight": 1.0,
+          "strategy": {
+            "fold": 0.3333102102143631,
+            "call": 0.6666897897856369
+          },
+          "action_evs": {
+            "fold": -50.00000000000001,
+            "call": -49.993939465848484
+          },
+          "ev": -49.99595950376054,
+          "reach_probability": 0.17091372617977366,
+          "counterfactual_reach": 0.1709187823356235,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "Ah": 0, "Ad": 0 }
+        },
+        {
+          "combo": "KhKd",
+          "hand_class": "KK",
+          "weight": 1.0,
+          "strategy": {
+            "fold": 0.9999998126031404,
+            "call": 1.8739685954507974e-7
+          },
+          "action_evs": {
+            "fold": -50.00000000000001,
+            "call": -93.73394283127337
+          },
+          "ev": -50.00000819560355,
+          "reach_probability": 0.1139515932040618,
+          "counterfactual_reach": 0.1709187823356235,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "Kh": 0, "Kd": 0 }
+        }
+      ],
+      "dead_combos": [],
+      "classes": [
+        {
+          "hand_class": "65s",
+          "combos": 1,
+          "strategy": {
+            "fold": 5.620688249948072e-7,
+            "call": 0.999999437931175
+          },
+          "ev": 124.99990163795562,
+          "reach_probability": 0.037992092350606556
+        },
+        {
+          "hand_class": "AA",
+          "combos": 1,
+          "strategy": {
+            "fold": 0.3333102102143631,
+            "call": 0.6666897897856369
+          },
+          "ev": -49.99595950376053,
+          "reach_probability": 0.17091372617977366
+        },
+        {
+          "hand_class": "KK",
+          "combos": 1,
+          "strategy": {
+            "fold": 0.9999998126031404,
+            "call": 1.8739685954507974e-7
+          },
+          "ev": -50.00000819560355,
+          "reach_probability": 0.1139515932040618
+        }
+      ],
+      "strategy": { "fold": 0.5293943301080143, "call": 0.4706056698919858 },
+      "ev": -29.40483375920976,
+      "reach_probability": 0.322857411734442
+    },
+    {
+      "id": "bet_0.75",
+      "player": "IP",
+      "history": ["bet_0.75"],
+      "pot": 175.0,
+      "actions": [
+        {
+          "id": "fold",
+          "label": "Fold",
+          "kind": "fold",
+          "amount": 0.0,
+          "fraction": 0.0
+        },
+        {
+          "id": "call",
+          "label": "Call",
+          "kind": "call",
+          "amount": 75.0,
+          "fraction": 0.0
+        }
+      ],
+      "combos": [
+        {
+          "combo": "AsAc",
+          "hand_class": "AA",
+          "weight": 1.0,
+          "strategy": { "fold": 0.4416290637625169, "call": 0.558370936237483 },
+          "action_evs": { "fold": -50.0, "call": -49.999951779932296 },
+          "ev": -49.99997307531565,
+          "reach_probability": 0.12344975437224831,
+          "counterfactual_reach": 0.12344975437224831,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "As": 0, "Ac": 0 }
+        },
+        {
+          "combo": "KsKc",
+          "hand_class": "KK",
+          "weight": 1.0,
+          "strategy": {
+            "fold": 0.9999997501249376,
+            "call": 2.498750624687656e-7
+          },
+          "action_evs": { "fold": -50.0, "call": -87.50163998429169 },
+          "ev": -50.00000937072464,
+          "reach_probability": 0.12344975437224831,
+          "counterfactual_reach": 0.12344975437224831,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "Ks": 0, "Kc": 0 }
+        },
+        {
+          "combo": "QhQd",
+          "hand_class": "QQ",
+          "weight": 1.0,
+          "strategy": {
+            "fold": 0.019886895454887272,
+            "call": 0.9801131045451127
+          },
+          "action_evs": { "fold": -50.0, "call": -49.99662359128121 },
+          "ev": -49.99669073756841,
+          "reach_probability": 0.12344975437224831,
+          "counterfactual_reach": 0.12344975437224831,
+          "opponent_combos_before": 3,
+          "opponent_combos_after": 3,
+          "opponent_weight_after": 3.0,
+          "blockers": { "Qh": 0, "Qd": 0 }
+        }
+      ],
+      "dead_combos": [],
+      "classes": [
+        {
+          "hand_class": "AA",
+          "combos": 1,
+          "strategy": { "fold": 0.4416290637625169, "call": 0.558370936237483 },
+          "ev": -49.99997307531565,
+          "reach_probability": 0.12344975437224831
+        },
+        {
+          "hand_class": "KK",
+          "combos": 1,
+          "strategy": {
+            "fold": 0.9999997501249376,
+            "call": 2.498750624687656e-7
+          },
+          "ev": -50.00000937072464,
+          "reach_probability": 0.12344975437224831
+        },
+        {
+          "hand_class": "QQ",
+          "combos": 1,
+          "strategy": {
+            "fold": 0.019886895454887272,
+            "call": 0.9801131045451127
+          },
+          "ev": -49.99669073756841,
+          "reach_probability": 0.12344975437224831
+        }
+      ],
+      "strategy": { "fold": 0.4871719031141139, "call": 0.512828096885886 },
+      "ev": -49.9988910612029,
+      "reach_probability": 0.37034926311674493
+    }
+  ],
+  "convergence": [
+    { "iteration": 100, "exploitability_pct": 0.018011367942606604 },
+    { "iteration": 200, "exploitability_pct": 0.005699450183923815 },
+    { "iteration": 300, "exploitability_pct": 0.0039006591246684152 },
+    { "iteration": 400, "exploitability_pct": 0.002443954975273499 },
+    { "iteration": 500, "exploitability_pct": 0.0028155489531878075 },
+    { "iteration": 600, "exploitability_pct": 0.002258724635036735 },
+    { "iteration": 700, "exploitability_pct": 0.001477143302887285 },
+    { "iteration": 800, "exploitability_pct": 0.0018632542375813799 },
+    { "iteration": 900, "exploitability_pct": 0.0012698366829786423 },
+    { "iteration": 1000, "exploitability_pct": 0.0014975090548041692 },
+    { "iteration": 1100, "exploitability_pct": 0.0010804849964189955 },
+    { "iteration": 1200, "exploitability_pct": 0.0008340203253105472 },
+    { "iteration": 1300, "exploitability_pct": 0.000556507376404447 },
+    { "iteration": 1400, "exploitability_pct": 0.0006659115359557433 },
+    { "iteration": 1500, "exploitability_pct": 0.0007068914611139121 },
+    { "iteration": 1600, "exploitability_pct": 0.0006715334273330598 },
+    { "iteration": 1700, "exploitability_pct": 0.0005723037167717493 },
+    { "iteration": 1800, "exploitability_pct": 0.0005250071502400644 },
+    { "iteration": 1900, "exploitability_pct": 0.0005250749663217036 },
+    { "iteration": 2000, "exploitability_pct": 0.0007067785488823475 }
+  ],
+  "compatible_deals": 9,
+  "tree_nodes": 82,
+  "elapsed_seconds": 0.2023752949999107,
+  "utility_convention": "zero-sum; net river value minus half the initial pot",
+  "engine_version": "reference-1"
+}

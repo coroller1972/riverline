@@ -1,0 +1,11 @@
+{
+  "board": ["Qs", "8h", "4h", "2c", "7d"],
+  "oop_range": "AhAd,KhKd,6h5h",
+  "ip_range": "AsAc,KsKc,QhQd",
+  "pot": 100,
+  "effective_stack": 100,
+  "oop_bet_sizes": [0.75],
+  "ip_bet_sizes": [0.75],
+  "algorithm": "cfr_plus",
+  "iterations": 2000
+}
